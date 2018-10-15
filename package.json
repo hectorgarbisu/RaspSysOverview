@@ -1,0 +1,28 @@
+{
+  "name": "raspsysoverview",
+  "version": "1.0.0",
+  "description": "A system overview page for my raspberry pi",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hectorgarbisu/RaspSysOverview.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "raspberry",
+    "system"
+  ],
+  "author": "geco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hectorgarbisu/RaspSysOverview/issues"
+  },
+  "homepage": "https://github.com/hectorgarbisu/RaspSysOverview#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
