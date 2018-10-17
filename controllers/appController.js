@@ -8,8 +8,12 @@ exports.main_page = (req, res) => {
     res.sendFile(path.join(__dirname, '..', "public", "index.html"));
 };
 
-exports.list = (req, res) => {
-    res.send(sysCtrl.status_all())
+exports.services = (req, res) => {
+    res.send(sysCtrl.services())
+};
+
+exports.ps_ax = (req, res) => {
+    res.send(sysCtrl.ps_ax())
 };
 
 exports.admin_page = (req, res) => {

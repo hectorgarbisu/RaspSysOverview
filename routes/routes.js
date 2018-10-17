@@ -7,7 +7,4 @@ module.exports = (app) => {
 
     app.route('/admin')
     .get(appController.admin_page)
-
-    app.route('/ls')
-    .get(appController.list)
 };

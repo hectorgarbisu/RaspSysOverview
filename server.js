@@ -5,8 +5,10 @@ const express = require('express')
 const app = express();
 port = process.env.PORT || 3000;
 
-var routes = require('./routes/routes.js');
-routes(app);
+var web_routes = require('./routes/routes.js');
+var api_routes = require('./routes/api.js');
+web_routes(app);
+api_routes(app)
 
 
 

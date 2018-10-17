@@ -6,10 +6,15 @@ exports.ls = () => {
     return output.replace(/\n/g,"<br>")
 }
 
-exports.status_all = () => {
+exports.services = () => {
     const output = execSync('service --status-all 2>&-', { encoding: 'utf-8' });
     const lines = output.split("\n")
-    const words = lines.map((x)=>[x.split(" ",5)[2],x.split(" ")[5]])
+    const words = lines.map((line)=>{
+        const tokens = line.split(" ", 6)
+        return { 
+            service : tokens[5],
+            serviceStatus : tokens[2],
+        }})
     return words
 }
 
