@@ -5,17 +5,17 @@ var path = require("path");
 
 
 exports.main_page = (req, res) => {
-    res.sendFile(path.join(__dirname, '..', "public", "index.html"));
+    res.status(200).sendFile(path.join(__dirname, '..', "public", "index.html"));
 };
 
 exports.services = (req, res) => {
-    res.send(sysCtrl.services())
+    res.status(200).send(sysCtrl.services())
 };
 
 exports.ps_ax = (req, res) => {
-    res.send(sysCtrl.ps_ax())
+    res.status(200).send(sysCtrl.ps_ax())
 };
 
 exports.admin_page = (req, res) => {
-    res.sendFile(path.join(__dirname, '..', "public", "admin.html"));
+    res.status(200).sendFile(path.join(__dirname, '..', "public", "admin.html"));
 };
