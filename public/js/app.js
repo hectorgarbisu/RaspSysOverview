@@ -23,9 +23,26 @@ API_GET = (endPoint, apipath="http://localhost:3000/api/") => {
     return promise
 }
 
+
+API_GET("ps_ax").then(processesString => {
+    table = document.createElement("table");
+    table.className += "pure-table";
+    table.innerHTML = "<thead><tr><th>PID</th><th>COMMAND</th></tr></thead>";
+    processesList = JSON.parse(processesString);
+    processesList.map( processObject => {
+        console.table(processObject)
+        const { pid, processName } = processObject
+        tr = document.createElement("tr")
+        tr.innerHTML = `<td>${pid}</td><td>${processName}</td>`
+        table.appendChild(tr)
+    });
+
+    processes.appendChild(table) 
+})
+.catch(x => console.log(`error: ${x}`))
+
 API_GET("services").then(x => services.innerHTML = x).catch(x => console.log(`error: ${x}`))
 
-API_GET("ps_ax").then(x => processes.innerHTML = x).catch(x => console.log(`error: ${x}`))
 
 
 
