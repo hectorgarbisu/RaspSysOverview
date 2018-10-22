@@ -32,3 +32,8 @@ exports.ps_ax = () => {
     });
     return json
 }
+
+
+exports.kill = (pids = []) => {
+    pids.map( pid => execSync(`kill -2 ${pid}`) )
+}

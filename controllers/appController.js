@@ -19,3 +19,10 @@ exports.ps_ax = (req, res) => {
 exports.admin_page = (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '..', "public", "admin.html"));
 };
+
+exports.kill = (req, res) => {
+    var pids = [5567]
+    sysCtrl.kill(pids)
+    res.end("hola")
+
+}

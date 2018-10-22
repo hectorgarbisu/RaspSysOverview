@@ -1,6 +1,7 @@
-body {
-    background-color: aqua;
+
+.greenText {
+    color: green;
 }
-table {
-    border: 2px;
+.redText {
+    color: red;
 }
