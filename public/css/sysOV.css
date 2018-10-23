@@ -5,3 +5,13 @@
 .redText {
     color: red;
 }
+section {
+    display: inline-block;
+    vertical-align: top;
+}
+li {
+    display: block;
+}
+table {
+    display: block;
+}
