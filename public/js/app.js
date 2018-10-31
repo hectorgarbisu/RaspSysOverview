@@ -2,8 +2,7 @@ const elem = name => { return document.getElementById(name) }
 var services = elem("services")
 var processes = elem("processes")
 
-
-API_GET = (endPoint, apipath = "http://localhost:3000/api/") => {
+API_GET = (endPoint, apipath = `http://${location.host}/api/`) => {
     let promise = new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         const url = `${apipath}${endPoint}`;
@@ -22,7 +21,7 @@ API_GET = (endPoint, apipath = "http://localhost:3000/api/") => {
     return promise
 }
 
-API_POST = (endPoint, args, apipath = "http://localhost:3000/api/") => {
+API_POST = (endPoint, args, apipath = `http://${location.host}/api/`) => {
     let promise = new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         const url = `${apipath}${endPoint}`
