@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/hectorgarbisu/RaspSysOverview#readme",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "nodemon": "^1.18.5"
   }
 }
